@@ -15,7 +15,7 @@
   , "moment-range": "0.1.0"
   }
 , "devDependencies":
-  , "mocha":         "latest"
+  { "mocha":         "latest"
   , "should":        "latest"
   }
 , "repository":

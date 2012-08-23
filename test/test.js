@@ -1,4 +1,4 @@
-var almanac = require('./lib/almanac.js')
+var almanac = require('../lib/almanac.js')
   , moment = require('moment')
   , should = require('should');
 
