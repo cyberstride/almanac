@@ -212,7 +212,7 @@ describe('scheduling', function(){
       it('should check if the almanac overlaps the start and end of the given date', function(){
       });
     });
-    describe('occuringNow', function(){
+    describe('occurringNow', function(){
       it('should check if the almanac is currently occuring', function(){
       });
     });
