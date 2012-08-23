@@ -6,13 +6,13 @@ describe('parsing', function(){
   describe('dates', function(){
     it('should parse dates without providing a format', function(){
       var schedule = almanac({start_date:'10-21-1983', end_date:'10-21-2013' });
-      schedule.start_date.should.eql(moment(new Date(1983, 10, 21)));
-      schedule.end_date.should.eql(moment(new Date(2013, 10, 21)));
+      schedule.start_date.should.eql(moment(new Date(1983,9,21)));
+      schedule.end_date.should.eql(moment(new Date(2013, 9, 21)));
     });
     it('should parse dates with provided format', function(){
       var schedule = almanac({start_date:'1983-10-21', end_date:'2013-10-21', date_format:'YYYY-MM-DD' });
-      schedule.start_date.should.eql(moment(new Date(1983, 10, 21)));
-      schedule.end_date.should.eql(moment(new Date(2013, 10, 21)));
+      schedule.start_date.should.eql(moment(new Date(1983, 9, 21)));
+      schedule.end_date.should.eql(moment(new Date(2013, 9, 21)));
     });
   });
   describe('times', function(){
