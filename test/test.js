@@ -1,5 +1,6 @@
 var almanac = require('./lib/almanac.js')
-  , moment = require('moment');
+  , moment = require('moment')
+  , should = require('should');
 
 describe('parsing', function(){
   describe('dates', function(){
@@ -31,29 +32,33 @@ describe('scheduling', function(){
     before(function(){
     });
     describe('next', function(){
-      it('should return the next moment', function(){
+      it('should return the next occasion', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('previous', function(){
       it('should return the previous moment', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('matches', function(){
-      it('should match a moment that overlaps', function(){
+      it('should match an occasion that overlaps a moment', function(){
       });
-      it('should match a range that overlaps', function(){
+      it('should match an occassion that overlaps a range of two moments', function(){
       });
-      it('should not match a moment that does not overlap', function(){
+      it('should match an occasion that overlaps another occasion', function(){
       });
-      it('should not match a range that does not overlap', function(){
+      it('should not match an occasion that does not overlap a moment', function(){
+      });
+      it('should not match an occasion that does not overlap a range of two moments', function(){
+      });
+      it('should not match an occasion that does not overlap another occasion', function(){
       });
     });
   });
@@ -61,29 +66,33 @@ describe('scheduling', function(){
     before(function(){
     });
     describe('next', function(){
-      it('should return the next moment', function(){
+      it('should return the next occasion', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('previous', function(){
       it('should return the previous moment', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('matches', function(){
-      it('should match a moment that overlaps', function(){
+      it('should match an occasion that overlaps a moment', function(){
       });
-      it('should match a range that overlaps', function(){
+      it('should match an occassion that overlaps a range of two moments', function(){
       });
-      it('should not match a moment that does not overlap', function(){
+      it('should match an occasion that overlaps another occasion', function(){
       });
-      it('should not match a range that does not overlap', function(){
+      it('should not match an occasion that does not overlap a moment', function(){
+      });
+      it('should not match an occasion that does not overlap a range of two moments', function(){
+      });
+      it('should not match an occasion that does not overlap another occasion', function(){
       });
     });
   });
@@ -91,29 +100,33 @@ describe('scheduling', function(){
     before(function(){
     });
     describe('next', function(){
-      it('should return the next moment', function(){
+      it('should return the next occasion', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('previous', function(){
       it('should return the previous moment', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('matches', function(){
-      it('should match a moment that overlaps', function(){
+      it('should match an occasion that overlaps a moment', function(){
       });
-      it('should match a range that overlaps', function(){
+      it('should match an occassion that overlaps a range of two moments', function(){
       });
-      it('should not match a moment that does not overlap', function(){
+      it('should match an occasion that overlaps another occasion', function(){
       });
-      it('should not match a range that does not overlap', function(){
+      it('should not match an occasion that does not overlap a moment', function(){
+      });
+      it('should not match an occasion that does not overlap a range of two moments', function(){
+      });
+      it('should not match an occasion that does not overlap another occasion', function(){
       });
     });
   });
@@ -121,29 +134,33 @@ describe('scheduling', function(){
     before(function(){
     });
     describe('next', function(){
-      it('should return the next moment', function(){
+      it('should return the next occasion', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('previous', function(){
       it('should return the previous moment', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('matches', function(){
-      it('should match a moment that overlaps', function(){
+      it('should match an occasion that overlaps a moment', function(){
       });
-      it('should match a range that overlaps', function(){
+      it('should match an occassion that overlaps a range of two moments', function(){
       });
-      it('should not match a moment that does not overlap', function(){
+      it('should match an occasion that overlaps another occasion', function(){
       });
-      it('should not match a range that does not overlap', function(){
+      it('should not match an occasion that does not overlap a moment', function(){
+      });
+      it('should not match an occasion that does not overlap a range of two moments', function(){
+      });
+      it('should not match an occasion that does not overlap another occasion', function(){
       });
     });
   });
@@ -151,29 +168,33 @@ describe('scheduling', function(){
     before(function(){
     });
     describe('next', function(){
-      it('should return the next moment', function(){
+      it('should return the next occasion', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('previous', function(){
       it('should return the previous moment', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('matches', function(){
-      it('should match a moment that overlaps', function(){
+      it('should match an occasion that overlaps a moment', function(){
       });
-      it('should match a range that overlaps', function(){
+      it('should match an occassion that overlaps a range of two moments', function(){
       });
-      it('should not match a moment that does not overlap', function(){
+      it('should match an occasion that overlaps another occasion', function(){
       });
-      it('should not match a range that does not overlap', function(){
+      it('should not match an occasion that does not overlap a moment', function(){
+      });
+      it('should not match an occasion that does not overlap a range of two moments', function(){
+      });
+      it('should not match an occasion that does not overlap another occasion', function(){
       });
     });
   });
@@ -181,29 +202,33 @@ describe('scheduling', function(){
     before(function(){
     });
     describe('next', function(){
-      it('should return the next moment', function(){
+      it('should return the next occasion', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('previous', function(){
       it('should return the previous moment', function(){
       });
-      it('should return total requested moments if they exist', function(){
+      it('should return total requested occasions if they exist', function(){
       });
-      it('should return only remaining moments if total exceeds that amount', function(){
+      it('should return only remaining occasions if total exceeds that amount', function(){
       });
     });
     describe('matches', function(){
-      it('should match a moment that overlaps', function(){
+      it('should match an occasion that overlaps a moment', function(){
       });
-      it('should match a range that overlaps', function(){
+      it('should match an occassion that overlaps a range of two moments', function(){
       });
-      it('should not match a moment that does not overlap', function(){
+      it('should match an occasion that overlaps another occasion', function(){
       });
-      it('should not match a range that does not overlap', function(){
+      it('should not match an occasion that does not overlap a moment', function(){
+      });
+      it('should not match an occasion that does not overlap a range of two moments', function(){
+      });
+      it('should not match an occasion that does not overlap another occasion', function(){
       });
     });
   });
