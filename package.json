@@ -20,6 +20,6 @@
   }
 , "repository":
   { "type": "git"
-  , "url": "https://git@github.com/cyberstride.git"
+  , "url": "https://git@github.com/cyberstride/almanac.git"
   }
 }
