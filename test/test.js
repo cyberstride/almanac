@@ -15,11 +15,11 @@ describe('parsing', function(){
     });
   });
   describe('times', function(){
-    it('should get start time from start_time is not available', function(){
+    it('should get start time from start date if start_time is not provided and start_date has a time greater than 00:00:00', function(){
     });
     it('should get end time from end_time is not available', function(){
     });
-    it('should use the end of the day if end_time is not set and end_date does not have a time', function(){
+    it('should get end time from end date if end_time is not provided and end_date has a time greater than 00:00:00', function(){
     });
     it('should use the beginning of the day if start_time is not set and start_date does not have a time', function(){
     });
