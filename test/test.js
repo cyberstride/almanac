@@ -1,9 +1,9 @@
 describe('almanac', function(){
   describe('parsing', function(){
     describe('dates', function(){
-      it('should parse dates from a string without a format provided', function(){
+      it('should parse dates without providing a format', function(){
       });
-      it('should parse dates from a string with the provided format', function(){
+      it('should parse dates with provided format', function(){
       });
     });
     describe('times', function(){
