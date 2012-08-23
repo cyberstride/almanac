@@ -1,0 +1,25 @@
+{ "name":         "almanac.js"
+, "description":  "Schedule recurring events then check to see if your date (or range) overlaps."
+, "author":       "cyberstride"
+, "homepage":     "https://github.com/cyberstride/almanac"
+, "bugs":         "https://github.com/cyberstride/almanac/issues"
+, "main":         "./lib/almanac"
+, "directories":  { "lib" : "./lib" }
+, "version":      "0.0.1"
+, "license": "MIT"
+, "engines":
+  { "node": "*"
+  }
+, "dependencies":
+  { "moment":       "1.7.0"
+  , "moment-range": "0.1.0"
+  }
+, "devDependencies":
+  , "mocha":         "latest"
+  , "should":        "latest"
+  }
+, "repository":
+  { "type": "git"
+  , "url": "https://git@github.com/cyberstride.git"
+  }
+}
