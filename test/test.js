@@ -6,17 +6,22 @@ describe('parsing', function(){
   describe('dates', function(){
     it('should parse dates without providing a format', function(){
       var schedule = almanac({start_date:'10-21-1983', end_date:'10-21-2013' });
-      schedule.start_date.should.eql(moment(new Date(1983,9,21)));
-      schedule.end_date.should.eql(moment(new Date(2013, 9, 21)));
+      console.log('start_date:');
+      var start_date = moment(new Date(1983,9,21));
+      console.log(start_date)
+      schedule.start_date.toString().should.equal(start_date.toString());
+      schedule.end_date.toString().should.eql(moment(new Date(2013, 9, 21)).toString());
     });
     it('should parse dates with provided format', function(){
       var schedule = almanac({start_date:'1983-10-21', end_date:'2013-10-21', date_format:'YYYY-MM-DD' });
-      schedule.start_date.should.eql(moment(new Date(1983, 9, 21)));
+      schedule.start_date.toString().should.eql(moment(new Date(1983, 9, 21)).toString());
       schedule.end_date.should.eql(moment(new Date(2013, 9, 21)));
     });
   });
   describe('times', function(){
     it('should get start time from start date if start_time is not provided and start_date has a time greater than 00:00:00', function(){
+      var schedule = almanac({start_date:'1983-10-21 10:30:00', end_date:'2013-10-21', date_format:'YYYY-MM-DD HH:mm:ss' });
+      schedule.start_time.should
     });
     it('should get end time from end_time is not available', function(){
     });
