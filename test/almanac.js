@@ -1,7 +1,7 @@
 require('should');
-
 var almanac = require('../')
 , moment = require('moment');
+
 describe('Almanac', function(){
   describe('parsing', function(){
     describe('dates', function(){
@@ -36,8 +36,6 @@ describe('Almanac', function(){
 
   describe('scheduling', function(){
     describe('single', function(){
-      before(function(){
-      });
       describe('next', function(){
         it('should return the next occasion', function(){
         });
@@ -70,8 +68,6 @@ describe('Almanac', function(){
       });
     });
     describe('daily', function(){
-      before(function(){
-      });
       describe('next', function(){
         it('should return the next occasion', function(){
         });
@@ -104,8 +100,6 @@ describe('Almanac', function(){
       });
     });
     describe('weekly', function(){
-      before(function(){
-      });
       describe('next', function(){
         it('should return the next occasion', function(){
         });
@@ -138,8 +132,6 @@ describe('Almanac', function(){
       });
     });
     describe('daymonthly', function(){
-      before(function(){
-      });
       describe('next', function(){
         it('should return the next occasion', function(){
         });
@@ -172,8 +164,6 @@ describe('Almanac', function(){
       });
     });
     describe('datemonthly', function(){
-      before(function(){
-      });
       describe('next', function(){
         it('should return the next occasion', function(){
         });
@@ -206,8 +196,6 @@ describe('Almanac', function(){
       });
     });
     describe('multiple rules', function(){
-      before(function(){
-      });
       describe('next', function(){
         it('should return the next occasion', function(){
         });

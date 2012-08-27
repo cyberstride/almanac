@@ -11,8 +11,9 @@
   { "node": "*"
   }
 , "dependencies":
-  { "moment":       "1.7.0"
-  , "underscore": "latest"
+  { "moment":            "1.7.0"
+  , "underscore":        "latest"
+  , "underscore.string": "latest"
   }
 , "devDependencies":
   { "mocha":         "latest"
