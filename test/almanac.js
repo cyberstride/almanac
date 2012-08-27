@@ -32,15 +32,18 @@ describe('Almanac', function(){
       it('should use the beginning of the day if startTime is not set and startDate does not have a time', function(){
       });
     });
-  });
+  });it
 
   describe('with type single', function(){
+    var schedule = {};
     before(function(){
-      var schedule = almanac({type:'single'});
+      schedule = almanac({type:'single'});
     });
-      it('should return null', function(){
-          //if an almanac only has type single then there is no next occurrence
-          schedule.next.should.equal(null);
+    describe('next'){
+      it('should return null if no date is passed and current date is past the endDate of the event', function(){
+            //if an almanac only has type single then there is no next occurrence
+            schedule.next.should.equal(null);
+      });
     });
   });
 });
