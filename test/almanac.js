@@ -39,7 +39,7 @@ describe('Almanac', function(){
     before(function(){
       schedule = almanac({type:'single'});
     });
-    describe('next'){
+    describe('next',function(){
       it('should return null if no date is passed and current date is beyond the endDate of the event', function(){
             //if an almanac only has type single then there is no next occurrence
             schedule.next.should.equal(null);
