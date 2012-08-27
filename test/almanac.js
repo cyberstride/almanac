@@ -35,8 +35,8 @@ describe('Almanac', function(){
   });
 
   describe('scheduling', function(){
-    describe('single', function(){
-      describe('next', function(){
+    describe('of a single occasion', function(){
+      describe('calling next()', function(){
         it('should return the next occasion', function(){
         });
         it('should return total requested occasions if they exist', function(){
@@ -237,7 +237,8 @@ describe('Almanac', function(){
         });
       });
       describe('occursAt', function(){
-        it('should check if the almanac occurs at a specific time')
+        it('should check if the almanac occurs at a specific time', function(){
+        });
       });
       describe('occursDuring', function(){
         it('should check if the almanac is occurring between a start and end date', function(){
