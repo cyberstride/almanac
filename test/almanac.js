@@ -62,9 +62,11 @@ describe('Almanac', function(){
         });
       });
       it('should return itself if a date is not a param but current date is not beyond the startDate of the occasion', function(done){
-        schedule = almanac({startDate:'10-10-2013', type:'single', duration:'10:00:00'})
+        schedule = almanac({startDate:'10/10/2013', type:'single', duration:'10:00:00'})
+        console.log(schedule);
         schedule.next(function(err, nxt){
-          nxt.should.equal(schedule);
+          console.log(nxt);
+          nxt.startDate.should.equal(moment('10/10/2013'));
         });
         done(new Error('should not make it here'));
       });
@@ -82,10 +84,7 @@ describe('Almanac', function(){
           schedule = almanac({startDate:'09/01/2012 08:00:00', duration:'06:30:00', type:'single'});
           schedule.occursWithin('09/01/2012 10:00:00', '09/01/2012 12:30:00').should.be.true;
           schedule.occursWithin('09/01/2013 10:00:00', '09/01/2013 12:30:00').should.be.false;
-          schedule.occursWithin({ from:'08/01/2012'
-                          , to: '09/02/2012'
-                          , callback: done
-                          });
+          schedule.occursWithin({ from:'08/01/2012' , to: '09/02/2012' , callback: done });
         });
       });
     });
