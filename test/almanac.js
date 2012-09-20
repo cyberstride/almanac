@@ -63,12 +63,10 @@ describe('Almanac', function(){
       });
       it('should return itself if a date is not a param but current date is not beyond the startDate of the occasion', function(done){
         schedule = almanac({startDate:'10/10/2013', type:'single', duration:'10:00:00'})
-        console.log(schedule);
         schedule.next(function(err, nxt){
-          console.log(nxt);
           nxt.startDate.should.equal(moment('10/10/2013'));
+          return done();
         });
-        done(new Error('should not make it here'));
       });
     });
     describe('occursAt', function(){
