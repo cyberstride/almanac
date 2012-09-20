@@ -18,7 +18,7 @@
 ,
   "scripts":
   {
-    "test" : "mocha --recursive --reporter spec --ui bdd --growl"
+    "test" : "mocha --recursive --reporter spec --growl -s 20ms -t 1000"
   }
 , "devDependencies":
   { "mocha":         "latest"
