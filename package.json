@@ -15,6 +15,11 @@
   , "underscore":        "latest"
   , "underscore.string": "latest"
   }
+,
+  "scripts":
+  {
+    "test" : "mocha --recursive --ui bdd --growl"
+  }
 , "devDependencies":
   { "mocha":         "latest"
   , "should":        "latest"
