@@ -19,6 +19,10 @@ describe('Almanac', function(){
         schedule.endDate.toString().should.equal(moment(new Date(2013, 9, 21)).toString());
       });
     });
+    describe('reading nickel occurrences', function(){
+      var data = {"type":"daily","start_date":"20120920","end_date":"20121020","start_time":"110000","end_time":"120000","interval":1,"day_of_week":null};
+      it('should convert nickel properties to almanac properties');
+    })
     describe('times', function(){
       it('should get start time from start date if startTime is not provided and startDate has a time greater than 00:00:00', function(){
         schedule = almanac({startDate:'1983-10-21 103000', endDate:'2013-10-21', format:'YYYY-MM-DD HHmmss' });
@@ -54,11 +58,12 @@ describe('Almanac', function(){
       });
     })
     describe('calling next',function(){
-      it('should return null if a date is not a param and current date is beyond the endDate of the occasion', function(){
+      it('should return null if a date is not a param and current date is beyond the endDate of the occasion', function(done){
         // if an almanac has type single then there is not a next occurrence beyond the startDate
         schedule = almanac({endDate:'10-10-1983', type:'single'});
         schedule.next(function(err, nxt){
           should.not.exist(nxt);
+          done();
         });
       });
       it('should return itself if a date is not a param but current date is not beyond the startDate of the occasion', function(done){
@@ -84,6 +89,46 @@ describe('Almanac', function(){
           schedule.occursWithin('09/01/2013 10:00:00', '09/01/2013 12:30:00').should.be.false;
           schedule.occursWithin({ from:'08/01/2012' , to: '09/02/2012' , callback: done });
         });
+      });
+    });
+  });
+
+  describe('occurring daily', function(){
+    var data = {type:"daily",startDate:"09/01/2012 08:00:00",duration:'01:00:00'};
+    describe('getting next', function(){
+      it('should return the next occasion', function(done){
+        schedule = almanac(data);
+        var now = new Date();
+        schedule.next(function(err,nxt){
+          nxt.startDate.should.equal(moment().add('d',1));
+          done();
+        });
+      });
+      it('should return total requested occasions if they exist', function(){
+      });
+      it('should return only remaining occasions if total exceeds that amount', function(){
+      });
+    });
+    describe('previous', function(){
+      it('should return the previous moment', function(){
+      });
+      it('should return total requested occasions if they exist', function(){
+      });
+      it('should return only remaining occasions if total exceeds that amount', function(){
+      });
+    });
+    describe('matches', function(){
+      it('should match an occasion that overlaps a moment', function(){
+      });
+      it('should match an occassion that overlaps a range of two moments', function(){
+      });
+      it('should match an occasion that overlaps another occasion', function(){
+      });
+      it('should not match an occasion that does not overlap a moment', function(){
+      });
+      it('should not match an occasion that does not overlap a range of two moments', function(){
+      });
+      it('should not match an occasion that does not overlap another occasion', function(){
       });
     });
   });
@@ -118,38 +163,7 @@ describe('Almanac', function(){
       });
     });
   });
-  describe('daily', function(){
-    describe('next', function(){
-      it('should return the next occasion', function(){
-      });
-      it('should return total requested occasions if they exist', function(){
-      });
-      it('should return only remaining occasions if total exceeds that amount', function(){
-      });
-    });
-    describe('previous', function(){
-      it('should return the previous moment', function(){
-      });
-      it('should return total requested occasions if they exist', function(){
-      });
-      it('should return only remaining occasions if total exceeds that amount', function(){
-      });
-    });
-    describe('matches', function(){
-      it('should match an occasion that overlaps a moment', function(){
-      });
-      it('should match an occassion that overlaps a range of two moments', function(){
-      });
-      it('should match an occasion that overlaps another occasion', function(){
-      });
-      it('should not match an occasion that does not overlap a moment', function(){
-      });
-      it('should not match an occasion that does not overlap a range of two moments', function(){
-      });
-      it('should not match an occasion that does not overlap another occasion', function(){
-      });
-    });
-  });
+  
   describe('weekly', function(){
     describe('next', function(){
       it('should return the next occasion', function(){
