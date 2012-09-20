@@ -101,6 +101,7 @@ describe('Almanac', function(){
         var now = new Date();
         schedule.next(function(err,nxt){
           nxt.startDate.should.equal(moment().add('d',1));
+          nxt.endDate.should.equal(moment(schedule.endDate));
           done();
         });
       });
